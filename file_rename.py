@@ -1,3 +1,8 @@
+"""
+Authored by AllAcacia, on 14/10/2024 (dd/mm/yyyy)
+file_rename_1.py | Used to bulk rename files. Swaps out the prefixes.
+"""
+
 from os import rename, listdir, getcwd
 
 # prefix = "Card-Jitsu_Cards_full_"

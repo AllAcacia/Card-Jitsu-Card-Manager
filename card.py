@@ -1,6 +1,7 @@
 """
 Authored by AllAcacia on 14/10/2024 (dd/mm/yyyy)
-card.py | "Card" class file
+card.py | "Card" class file, contains dictionaries for what symbols mean.
+Intended to be used for in-game logic too, implemented as needed.
 """
 
 COLOURS = {"r": (0, "red"), "o": (1, "orange"), "y": (2, "yellow"), "g": (3, "green"), "b": (4, "blue"), "p": (5, "purple")}

@@ -1,3 +1,8 @@
+"""
+Authored by AllAcacia, on 14/10/2024 (dd/mm/yyyy)
+file_rename_1.py | Used to bulk rename files, but with a non-breaking sequence number suffix (1, 2, 3, 4, ...).
+"""
+
 from os import rename, listdir, getcwd
 
 # prefix = "Card-Jitsu_Cards_full_"
