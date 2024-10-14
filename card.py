@@ -77,22 +77,22 @@ class Card():
         """Returns the validity of the card's details."""
         result = True
         if (colour not in COLOURS.keys()):
-            print(f"'{colour}' is an invalid colour. Must be one of {COLOURS.keys()}")
+            print(f"'{colour}' is an invalid colour. Must be one of {COLOURS.keys()}.")
             result = False
         if (element not in ELEMENTS.keys()):
-            print(f"'{element}' is an invalid element. Must be one of {ELEMENTS.keys()}")
+            print(f"'{element}' is an invalid element. Must be one of {ELEMENTS.keys()}.")
             result = False
         if (powered not in POWERED.keys()):
-            print(f"'{powered}' is an invalid power status. Must be one of {POWERED.keys()}")
+            print(f"'{powered}' is an invalid power status. Must be one of {POWERED.keys()}.")
             result = False
         if (effect not in EFFECTS.keys()):
-            print(f"'{effect}' is an invalid effect. Must be one of {EFFECTS.keys()}")
+            print(f"'{effect}' is an invalid effect. Must be one of {EFFECTS.keys()}.")
             result = False
         if (rank < 1) and (rank > 804):
             print(f"'{rank}' is an invalid rank number. Must be between {RANK_MIN} and {RANK_MAX}.")
             result = False
-        if (value < VALUE_MIN) or (value > VALUE_MAX):
-            print(f"A value of '{value}' is out of bounds of {VALUE_MIN} and {VALUE_MAX}")
+        if (value < VALUE_MIN):
+            print(f"A value of '{value}' is less than {VALUE_MIN}.")
             result = False
         
         return result
