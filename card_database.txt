@@ -1,0 +1,520 @@
+# id#, rank#, element, colour, is-power-card, side-effect
+# colours = {"r": (0, "red"), "o": (1, "orange"), "y": (2, "yellow"), "g": (3, "green"), "b": (4, "blue"), "p": (5, "purple")}
+# elements = {"f": (0, "fire"), "w": (1, "water"), "s": (2, "snow")}
+# power = {"n": (False, "not powered"), "y": (True, "powered")}
+# side_effect = {"na": (0, "no effect"), "df": (1, "discard fire"), "dw": (2, "discard water"), "ds": (3, "discard snow"),
+                 "dr": (4, "discard red"), "do": (5, "discard orange"), "dy": (6, "discard yellow"),
+                 "dg": (7, "discard green"), "db": (8, "discard blue"), "dp": (9, "discard purple"),
+                 "fs": (10, "fire to snow"), "sw": (11, "snow to water"), "wf": (12, "water to fire"),
+                 "bf": (13, "block fire"), "bw": (14, "block water"), "bs": (15, "block snow")
+                 "pr": (16, "power reversal"), "pt": (17, "plus two (user)"), "mt": (18, "minus two (opponent)")}
+------------------------------------------------------------
+1,3,f,b,n,na,Cart Surfer
+2,2,f,g,n,na,Coffee Shop
+3,8,f,g,n,na,Astro-Barrier
+4,3,f,o,n,na,Hot Chocolate
+5,4,f,p,n,na,Landing Pad
+6,6,f,p,n,na,Pizza Chef
+7,2,f,r,n,na,Paint by Letters
+8,7,f,r,n,na,Mine
+9,2,f,y,n,na,Construction Worker
+10,5,f,y,n,na,Jet Pack Adventure
+11,3,s,b,n,na,Gift Shop
+12,2,s,g,n,na,Hiking In the Forest
+13,5,s,g,n,na,Rescue Squad
+14,3,s,o,n,na,Pet Shop
+15,4,s,p,n,na,Ski Village
+16,8,s,p,n,na,Ice Hockey
+17,2,s,r,n,na,Ski Hill
+18,6,s,r,n,na,Snowball Fight
+19,2,s,y,n,na,Snow Forts
+20,7,s,y,n,na,Soccer
+21,3,w,b,n,na,Beach
+22,5,w,b,n,na,Football
+23,2,w,g,n,na,Baseball
+24,8,w,g,n,na,Emerald Princess
+25,3,w,o,n,na,Bean Counters
+26,4,w,p,n,na,Manhole Cover
+27,6,w,p,n,na,Newspaper Archives
+28,2,w,r,n,na,Underground Pool
+29,7,w,r,n,na,Scuba Diving
+30,2,w,y,n,na,Ice Fishing
+31,2,f,b,n,na,Case of the Missing Coins
+32,5,f,b,n,na,Crates and Boxes
+33,4,f,g,n,na,Anvil Smith
+34,6,f,o,n,na,Halloween
+35,3,f,p,n,na,Knight
+36,5,f,r,n,na,Black Puffle
+37,4,f,y,n,na,Medieval Party
+38,2,s,b,n,na,Blue Puffle
+39,5,s,b,n,na,Pink Puffle
+40,4,s,g,n,na,Green Puffle
+41,6,s,o,n,na,Puffle Furniture
+42,3,s,p,n,na,Purple Puffle
+43,5,s,r,n,na,Red Puffle
+44,4,s,y,n,na,Yellow Puffle
+45,2,w,b,n,na,Summer Party [1]
+46,4,w,g,n,na,Gray Fish
+47,6,w,o,n,na,O Berry
+48,3,w,p,n,na,Life Ring
+49,5,w,r,n,na,Jolly Roger Flag
+50,5,w,y,n,na,Coins
+51,6,f,b,n,na,Gary the Gadget Guy
+52,5,f,g,n,na,Buoys
+53,4,f,o,n,na,Yarr
+54,8,f,p,n,na,Klutzy
+55,3,f,r,n,na,Herbert P. Bear
+56,7,f,y,n,na,Hot Sauce
+57,6,s,b,n,na,Snow Castle
+58,7,s,g,n,na,Aunt Arctic
+59,4,s,o,n,na,Christmas Carols
+60,8,s,o,n,na,Beta Party
+61,6,s,p,n,na,Hidden Items
+62,3,s,r,n,na,Secret Agent
+63,5,s,y,n,na,Snow Shovel
+64,6,w,b,n,na,The Migrator
+65,5,w,g,n,na,Captain Rockhopper
+66,4,w,o,n,na,Ice Cream
+67,8,w,p,n,na,Mullet
+68,3,w,r,n,na,Underground Flood
+69,4,w,y,n,na,Fluffy the Fish
+70,7,w,y,n,na,Shark
+71,9,f,r,y,bs,Flooring Upgrade
+72,9,f,b,y,wf,Gadget Room
+73,10,f,y,y,pr,Jackhammer
+74,10,f,o,y,ds,Jet Pack
+75,11,f,p,y,dr,Thin Ice
+76,11,f,g,y,dy,Night Vision Goggles
+77,12,f,r,y,pt,Mighty Plunger      
+78,12,f,b,y,mt,Dragon
+79,9,s,r,y,bw,Space Adventure      
+80,9,s,b,y,fs,Tour Guide
+81,10,s,g,y,pr,Sled Racing
+82,10,s,g,y,dw,Puffle Round-Up
+83,11,s,p,y,dg,Ac3000
+84,11,s,y,y,dp,Snow Globe Igloo
+85,12,s,o,y,pt,Shadow Guy & Gamma Gal
+86,12,s,o,y,mt,Avalanche
+87,9,w,r,y,bf,Water Party [1]
+88,9,w,b,y,sw,Catchin' Waves
+89,10,w,y,y,pr,Firefighter
+90,10,w,o,y,df,Aqua Grabber
+91,11,w,p,y,db,Octopus
+92,11,w,g,y,do,Cactus
+93,12,w,p,y,pt,Tipping the Iceberg
+94,12,w,y,y,mt,Ninja
+95,12,s,b,y,dy,White Puffle
+96,11,f,r,y,ds,Yarr
+97,11,w,g,y,dg,Keeper of the Boiler Room
+98,8,f,r,n,na,Blast
+99,7,f,o,n,na,Flare
+100,6,s,y,n,na,Chirp
+101,5,w,p,n,na,Pop
+102,7,f,o,n,na,Loop
+103,6,s,g,n,na,Flit
+104,5,w,b,n,na,Bouncer
+105,4,f,b,n,na,Ed Mccool and Destructo
+106,2,w,g,n,na,Niblet
+107,3,s,p,n,na,Snowy Night
+108,4,f,g,n,na,Puffles On the Loose
+109,3,w,g,n,na,Cadence and the Keeper
+110,2,s,y,n,na,Golden Puffle
+111,5,f,r,n,na,Meteor Puffle
+112,4,w,p,n,na,Rainbow Puffle
+113,3,s,o,n,na,Abominable Snow Puffle
+201,2,f,b,n,na,Club Penguin Times
+202,3,f,b,n,na,Can of Worms
+203,4,f,p,n,na,Winter Fiesta Party
+204,5,f,o,n,na,Invisible Ninja Suit
+205,6,f,r,n,na,Penguin Mail
+206,6,f,y,n,na,Bumble Bee
+207,7,f,o,n,na,Pizzatron 3000
+208,8,f,r,n,na,Card-Jitsu
+209,4,s,b,n,na,Adopt-A-Puffle
+210,4,s,o,n,na,Rock & Roll Suit
+211,5,s,p,n,na,Construction
+212,6,s,g,n,na,Hidden Pins
+213,7,s,y,n,na,Treasure Hunt Game
+214,8,s,g,n,na,Dj3K
+215,2,w,g,n,na,Surf Boards
+216,3,w,g,n,na,Beach Chair Chilling
+217,4,w,r,n,na,Telescope
+218,4,w,y,n,na,Fish Costume
+219,5,w,o,n,na,Crow's Nest
+220,6,w,b,n,na,The Cove
+221,6,w,o,n,na,Captain's Quarters
+222,8,w,b,n,na,Iceberg
+223,3,f,p,n,na,The Lounge
+224,4,f,g,n,na,Rockhopper's Key
+225,5,f,y,n,na,Penguins That Time Forgot [2]
+226,6,f,o,n,na,Team Blue Rally
+227,7,f,r,n,na,Jet Pack Adventure
+228,2,s,r,n,na,Ruby and the Ruby
+229,3,s,o,n,na,Snowball Fight
+230,5,s,p,n,na,Snowball Press
+231,6,s,y,n,na,Music Jam
+232,7,s,g,n,na,Puffle Chew-Chew
+233,2,w,g,n,na,Fairy Fables
+234,3,w,y,n,na,Jelly Fish
+235,4,w,r,n,na,Pirate
+236,5,w,p,n,na,Fish Bait
+237,7,w,b,n,na,Hydro Hopper
+238,7,w,b,n,na,Puffle O's
+239,4,f,p,n,na,Fall Fair Games
+240,5,f,g,n,na,Thinga-Ma-Jig 3000
+241,3,s,r,n,na,Rad Scientist
+242,5,s,b,n,na,Quip and Qua
+243,6,s,p,n,na,Twee
+244,8,s,g,n,na,Coins for Change
+245,5,w,r,n,na,Surfing with the Sharks
+246,6,w,p,n,na,Dance Contest
+247,7,w,p,n,na,Purple Octopus
+248,8,w,b,n,na,Giant Squid
+249,9,f,b,y,wf,Penguin Band
+250,10,f,y,y,bs,Dojo Sketch
+251,11,f,p,y,dr,Flare Flinger 3000
+252,12,f,r,y,do,Herbert & Klutzy
+253,9,s,o,y,bw,Coffee Delivery Truck
+254,10,s,b,y,fs,Anniversary Party
+255,11,s,y,y,dw,Halloween Party
+256,12,s,p,y,dp,Sensei
+257,9,w,p,y,db,Jackhammers
+258,10,w,y,y,bf,Quest For the Golden Puffle
+259,11,w,o,y,df,Storm
+260,12,w,b,y,sw,Rockhopper
+301,2,f,o,n,na,Camera
+302,3,f,b,n,na,Wigs
+303,4,f,r,n,na,Pizza Parlor
+304,5,f,o,n,na,Coffee Machine
+305,6,f,r,n,na,Costume Trunk
+306,6,f,y,n,na,Pet Shop Staff
+307,7,f,o,n,na,Stompin' Bob
+308,8,f,r,n,na,G Billy
+309,4,s,b,n,na,Outdoor Igloo
+310,4,s,o,n,na,Ticket Booth
+311,5,s,p,n,na,Ridge Run
+312,6,s,g,n,na,Clock Tower
+313,7,s,y,n,na,White Puffles
+314,8,s,g,n,na,Dojo Courtyard
+315,2,w,g,n,na,Rocking Horse
+316,3,w,g,n,na,Penguin Style
+317,4,f,r,n,na,Stage Director
+318,4,w,y,n,na,Conductor
+319,5,w,o,n,na,Beacon
+320,6,f,o,n,na,Discovering the Underground
+321,6,w,o,n,na,Franky
+322,8,w,b,n,na,Petey K.
+323,3,f,p,n,na,Boombox
+324,4,f,g,n,na,Mild Mannered Reporter
+325,5,f,y,n,na,The Twelfth Fish
+326,6,f,o,n,na,April Fool's Day Party
+327,7,f,r,n,na,Plasma Glow Wave
+328,2,s,r,n,na,Cowbell
+329,3,s,o,n,na,O Berry Bush
+330,3,s,r,n,na,Chester the Time Traveler
+331,5,s,r,n,na,101 Days of Fun
+332,6,s,y,n,na,Color Vote [4]
+333,7,s,g,n,na,Christmas Party
+334,2,w,g,n,na,Viking Opera
+335,3,w,y,n,na,Water Balloons
+336,4,w,r,n,na,Tuba
+337,5,w,p,n,na,Rockhopper's Plants
+338,7,w,b,n,na,Adventure Party
+339,7,f,o,n,na,Penguin Play Awards
+340,4,f,p,n,na,All-Access Pass
+341,5,f,g,n,na,Cadence's Autograph
+342,5,s,b,n,na,Treasure Book
+343,6,s,p,n,na,Black Hoodie
+344,8,s,g,n,na,Propellor Cap
+345,5,w,r,n,na,Dessert Pizza
+346,6,w,r,n,na,Black Electric Guitar
+347,7,w,p,n,na,Mastering the Elements
+348,8,w,b,n,na,Elite Penguin Force
+349,11,f,b,y,dmr,Switchbox 3000
+350,10,f,y,y,dmb,Medieval Party
+351,11,f,r,y,mt,Cadence
+352,12,f,o,y,dmg,Cloud Wave
+353,12,s,r,y,mt,Ghost Sheet
+354,10,s,g,y,dmp,Cart Surfer
+355,9,s,p,y,dmo,Keytar
+356,9,s,y,y,pt,X-Treme Jetpack
+357,9,w,b,y,pt,Box Dimension
+358,10,w,p,y,dmy,Gold Viking Helmet
+359,11,w,o,y,pt,Gary the Gadget Guy
+360,12,w,g,y,mt,Rockhopper's Cannon
+401,2,w,r,n,na,Multiplayer Battle
+402,3,f,b,n,na,Hot Sauce
+403,4,s,p,n,na,Fired Up
+404,2,w,g,n,na,Goldsmith
+405,3,f,y,n,na,Ninja Battle Scroll
+406,4,s,o,n,na,The Volcano Awakens
+407,2,w,b,n,na,Ready For Battle
+408,3,f,p,n,na,Flying Flippers Emporium
+409,4,s,g,n,na,Card-Jitsu Fire Duel
+410,2,w,o,n,na,Sensei's Game Face
+411,3,f,r,n,na,Building the Entrance
+412,4,s,y,n,na,Elements Hideout
+413,5,w,r,n,na,The Quest For Fire
+414,6,f,b,n,na,Stoking the Volcano
+415,5,s,p,n,na,Amulet Construction
+416,6,w,g,n,na,Fire Ninja Stance
+417,5,f,y,n,na,Ninja Sketches
+418,6,s,o,n,na,Fire Ninja Statue
+419,5,w,r,n,na,Tub of Hot Sauce
+420,6,f,b,n,na,Fire Dojo Sketch
+421,7,w,r,n,na,Sensei
+422,8,w,b,n,na,Volcano Entrance Sketch
+423,9,f,p,n,na,The Amulet
+424,7,f,g,n,na,Journey To the Volcano
+425,8,s,y,n,na,Volcano Entrance
+426,9,s,o,n,na,Sensei's Fire Robes
+427,12,f,r,y,ds,Fire Ninja
+501,2,f,b,n,na,Monkey King
+502,3,f,b,n,na,Jet Pack Pilot
+503,4,f,p,n,na,Fairy Princess
+504,5,f,o,n,na,Puffle Grooming
+505,6,f,r,n,na,Halloween Costumes
+506,6,f,y,n,na,Costume Show
+507,7,f,o,n,na,Soccer Match
+508,2,f,b,n,na,Bean Counters
+509,3,f,b,n,na,Earth Day Recycling
+510,4,f,p,n,na,Penguin Play Awards
+511,5,f,o,n,na,Goal!
+512,6,f,r,n,na,Bamboo Forest Sketch
+513,6,f,y,n,na,The Mine Cave Is Safe!
+514,7,f,o,n,na,Mine Cave Construction
+515,4,s,b,n,na,Guardian Dog
+516,4,s,o,n,na,The Fair
+517,5,s,p,n,na,Hockey Gear
+518,6,s,g,n,na,Puffle Show
+519,7,s,y,n,na,Holiday Gifts
+520,8,s,g,n,na,Holiday Activities
+521,4,s,b,n,na,Stadium
+522,4,s,o,n,na,Igloo Items
+523,5,s,p,n,na,Music Jam
+524,6,s,g,n,na,Elite Penguin Sketch
+525,2,w,g,n,na,Festival of Flight
+526,3,w,g,n,na,Test Glider
+527,4,w,r,n,na,Puffle Paddle
+528,4,w,y,n,na,Fancy Formal Wear
+529,5,w,o,n,na,The Docks
+530,6,w,b,n,na,Orange Puffle
+531,6,w,o,n,na,Community Tree
+532,8,w,b,n,na,Community Garden
+533,2,w,g,n,na,Island Adventure Party
+534,3,w,g,n,na,Shops In Igloos
+535,4,w,r,n,na,Seafarer's Gown
+536,4,w,y,n,na,Music Jam Dancers
+537,5,w,o,n,na,Music Jam Rock Stage
+538,6,w,b,n,na,Music Jam Pop Stage
+539,6,w,o,n,na,Underwater Adventure
+540,8,w,b,n,na,Norman Swarm
+541,2,w,g,n,na,Puffle Rescuer
+542,3,w,g,n,na,Everyday Phoning Facility
+543,3,f,p,n,na,Jet Packs
+544,4,f,g,n,na,Pumpkin Igloo
+545,5,f,y,n,na,Treasure Hunt Adventure
+546,6,f,o,n,na,Destroyed Psa Hq
+547,7,f,r,n,na,Captains
+548,7,f,r,n,na,April Fools
+549,2,s,r,n,na,The Great Snow Maze
+550,3,s,o,n,na,Jacques Hammer
+551,5,s,p,n,na,Throne of April Fools
+552,7,s,g,n,na,The Test
+553,2,w,g,n,na,Cloud Maker 3000
+554,3,w,y,n,na,Super Exclusives
+555,4,w,r,n,na,Rockslide at the Mine
+556,5,w,p,n,na,Mer-Penguins
+557,7,w,b,n,na,Puffer Fish
+558,7,w,b,n,na,Garden Hose
+559,7,w,b,n,na,Fixing the Mine Shack
+560,4,f,p,n,na,Puffle Circus
+561,5,f,g,n,na,Puffle Play Sketch
+562,4,f,p,n,na,Dragon Statue
+563,5,f,g,n,na,Popcorn Party
+564,3,s,r,n,na,White Puffle Room
+565,5,s,b,n,na,Green Puffle Sketch
+566,6,s,p,n,na,Fishbowl Igloo
+567,5,w,r,n,na,Ship Battle Adventure
+568,6,w,p,n,na,Elite Penguin Force
+569,7,w,p,n,na,Rockhopper's Notice Board
+570,8,w,b,n,na,The Squid Lid
+571,8,w,b,n,na,Hidden Lake
+572,9,f,b,y,wf,Orange Puffle Wagon
+573,10,f,y,y,bs,Haunted House
+574,11,f,p,y,dr,Fire Dragon
+575,12,f,r,y,do,Puffle Rescue: Underground
+576,9,s,o,y,bw,Double Necked Guitar
+577,10,s,b,y,fs,Puffle Rescue: Ice Floes
+578,11,s,y,y,dp,Spy Phone
+579,12,s,p,y,dw,Dance Contest
+580,9,w,p,y,db,Crab Costume
+581,10,w,y,y,bf,Puffle Washer
+582,11,w,o,y,df,Green Jackhammer
+583,12,w,b,y,sw,The Veggie Villain
+584,9,f,b,y,wf,Island Lifter 3000
+585,10,f,y,y,bs,Flare
+586,11,f,p,y,dr,Popcorn Device
+587,12,f,r,y,do,Field-Ops
+588,9,s,o,y,bw,Recipe For Disaster
+589,10,s,b,y,fs,Elite Agent
+590,11,s,y,y,dp,Aunt Arctic Sketch
+591,12,s,p,y,dw,Yeti Cave
+592,9,w,p,y,db,Shocktopus
+593,10,w,y,y,bf,Puffle Rescue: Underwater
+594,11,w,o,y,df,Hidden Lake Lock
+595,12,w,b,y,sw,Knight's Quest
+601,2,f,b,n,na,Spooky Igloo Contest
+602,3,f,b,n,na,Halloween Countdown!
+603,4,f,p,n,na,Stormy Skies
+604,5,f,o,n,na,5th Anniversary Party
+605,6,f,r,n,na,5th Anniversary Cake
+606,6,f,y,n,na,5th Anniversary Yearbook
+607,7,f,o,n,na,Snowball Fight!
+608,2,f,b,n,na,Find Four
+609,3,f,b,n,na,Cozy Ski Lodge
+610,4,f,p,n,na,Holiday Decorations!
+611,5,f,o,n,na,Book Room Adventures
+612,6,f,r,n,na,Halloween Forest
+613,6,f,y,n,na,Brown Puffle Rocket
+614,7,f,o,n,na,Fun at the Fair!
+615,4,s,b,n,na,Ski Hill Challenge
+616,4,s,o,n,na,Holiday Party Skating
+617,5,s,p,n,na,Treasure!
+618,6,s,g,n,na,Lumberjack Look
+619,7,s,y,n,na,Pink Sparkle Snowshoes
+620,8,s,g,n,na,Holiday Tree 2010
+621,4,s,b,n,na,Fill the Lighthouse!
+622,4,s,o,n,na,Wilderness Machine
+623,5,s,p,n,na,Expedition Boat
+624,6,s,g,n,na,Wilderness Expedition Cave
+625,2,w,g,n,na,Water Party Prep
+626,3,w,g,n,na,Water Dance
+627,4,w,r,n,na,Stamp Collectors
+628,4,w,y,n,na,Explore the Wilderness
+629,5,w,o,n,na,Coins For Change 2010!
+630,6,w,b,n,na,Penguin Colors [2]
+631,6,w,o,n,na,Fairy Fables
+632,8,w,b,n,na,Penguins That Time Forgot [3]
+633,2,w,g,n,na,EPF Sketch
+634,3,w,g,n,na,Cove Stories
+635,4,w,r,n,na,Orange Circus Puffle
+636,4,w,y,n,na,Hydro Hopper
+637,5,w,o,n,na,Igloo Party!
+638,6,w,b,n,na,Life Underwater
+639,6,w,o,n,na,Herbert's Monologue
+640,8,w,b,n,na,Enemy Bots
+641,2,w,g,n,na,Paint by Letters
+642,3,w,g,n,na,Secret Agent
+643,3,f,p,n,na,Fireworks
+644,4,f,g,n,na,EPF Tech Agent
+645,5,f,y,n,na,Popcorn Explosion
+646,6,f,o,n,na,Walk Your Puffle
+647,7,f,r,n,na,Sumo Smash
+648,7,f,r,n,na,Inventive Brown Puffle
+649,2,s,r,n,na,Holiday Party Tree
+650,3,s,o,n,na,EPF Enemies
+651,5,s,p,n,na,Tall Tree Maze
+652,7,s,g,n,na,Sled 'N Slide
+653,2,w,g,n,na,Underwater at the Stage
+654,3,w,y,n,na,Wilderness Expedition Travel
+655,4,w,r,n,na,Catch the Mullet!
+656,5,w,p,n,na,Great Puffle Circus
+657,7,w,b,n,na,Intense Black Puffle
+658,7,w,b,n,na,Brown Puffle Storyboard
+659,7,w,b,n,na,Java Jump
+660,4,f,p,n,na,Master the Elements
+661,5,f,g,n,na,Fairy Fables Stage
+662,4,f,p,n,na,Creative Puffles
+663,5,f,g,n,na,Goofy Green Puffle
+664,3,s,r,n,na,EPF Test Room
+665,5,s,b,n,na,Snowball Battle
+666,6,s,p,n,na,Fabulous Purple Puffle
+667,5,w,r,n,na,Water Party Sketch
+668,6,w,p,n,na,Zany Orange Puffle
+669,7,w,p,n,na,Sporty Pink Puffle
+670,8,w,b,n,na, Wii Game Day "Goal!"
+671,8,w,b,n,na,Epic White Puffle
+672,9,f,b,n,na,Awesome Blue Puffle
+673,9,f,y,n,na,Feed a Puffle
+674,2,f,b,n,na,Ninja Battle
+675,4,f,p,n,na,The Mystery of Sensei
+676,5,f,o,n,na,Master the Elements
+677,6,f,r,n,na,Brown Puffle
+678,6,f,y,n,na,Fire Wave
+679,7,f,o,n,na,Black Puffles In Cart Surfer
+680,4,s,b,n,na,Mountain Expedition
+681,4,s,o,n,na,Climbing the Mountain
+682,5,s,p,n,na,"Top of the Toughest Mountain
+683,6,s,g,n,na,Cart Surfer Stamps
+684,7,s,y,n,na,Stamp Book
+685,8,s,g,n,na,Stormy Sky
+686,4,s,b,n,na,Water Wave Sketches
+687,4,s,o,n,na,Storm Baffles Gary
+688,3,w,g,n,na,Water Ninja
+689,4,w,r,n,na,The First Rainstorm
+690,4,w,y,n,na,Ninja Face-off
+691,5,w,o,n,na,Earning the Water Suit
+692,6,w,b,n,na,Water Pumping Gadget
+693,6,w,o,n,na,Preparing the Water Dojo
+694,8,w,b,n,na,Gate To the Water Dojo
+695,2,w,g,n,na,Water Suit
+696,3,w,g,n,na,Sign From the Elements
+697,4,w,r,n,na,Sensei - Master of Water
+698,4,w,y,n,na,Water Ninja Poster Sketch
+699,5,w,o,n,na,Water Ninja Sketch
+700,3,f,p,n,na,Water Beats Fire Sketch
+701,8,f,r,n,na,Blast [5]
+702,7,f,o,n,na,Flare [6]
+703,6,s,y,n,na,Chirp [7]
+704,5,w,p,n,na,Pop [8]
+705,7,f,o,n,na,Loop [9]
+706,6,s,g,n,na,Flit [11]
+707,5,w,b,n,na,Bouncer [12]
+708,4,f,b,n,na,Ed McCool and Destructo [13]
+709,2,w,g,n,na,Niblet [14]
+710,3,s,p,n,na,Snowy Night [15]
+711,4,f,g,n,na,Puffles On the Loose [16]
+712,3,w,g,n,na,Cadence and the Keeper [17]
+713,2,s,y,n,na,Golden Puffle [18]
+714,5,f,r,n,na,Meteor Puffle [19]
+715,4,w,p,n,na,Rainbow Puffle [20]
+716,3,s,o,n,na,Abominable Snow Puffle [21]
+717,5,f,r,n,na,Black Puffle [22]
+718,2,s,b,n,na,Blue Puffle [23]
+719,5,s,b,n,na,Pink Puffle [24]
+720,4,s,g,n,na,Green Puffle [25]
+721,3,s,p,n,na,Purple Puffle [26]
+722,5,s,r,n,na,Red Puffle [27]
+723,4,s,y,n,na,Yellow Puffle [28]
+724,10,s,g,y,dw,Puffle Round Up [2]
+725,12,f,r,y,do,Fire Ninja Force
+726,9,s,o,y,bw,Halloween Swamp
+727,10,s,b,y,sw,Prepare For Pumpkins
+728,11,s,y,y,dp,Finding Rockhopper
+729,12,s,p,y,dw,Elite Puffle: Flare
+730,9,w,p,y,db,Giant Pearl
+731,10,w,y,y,bf,Water Stamps
+732,11,w,o,y,df,EPF Agents
+733,12,w,b,y,sw,Puffle Rescue
+734,9,f,b,y,wf,Fire Dojo Challenge
+735,10,f,y,y,bs,System Defender
+736,11,f,p,y,dr,Adventurous Red Puffle
+737,12,f,r,y,do,G and the Machine
+738,9,s,o,y,bw,Enemies of the System
+739,10,s,b,y,fs,Holiday Dojo Lights
+740,11,s,y,y,dp,Wii Rollin' Riot
+741,12,s,p,y,dw,EPF Under attack
+742,9,w,p,y,db,Elite Comm Class Agents
+743,10,w,y,y,bf,Brown Puffle Cliff
+744,11,w,o,y,df,Coins For Change Goal!
+745,9,w,b,y,bf,Sensei Water Battle
+746,10,f,y,y,bs,Green Puffles In Jet Pack Adventure
+747,11,w,p,y,dr,Water Dojo
+748,12,s,b,y,dy,White Puffle [3]
+749,11,f,r,y,ds,Yarr [4]
+750,11,w,g,y,dg,Keeper of the Boiler Room
+801,6,f,r,n,na,Mobile Fire 1
+802,7,s,g,n,na,Mobile Snow 1
+803,8,w,b,n,na,Mobile Water 1
+804,11,f,p,y,pt,Mobile Fire Power Card 1
