@@ -1,6 +1,8 @@
 # Card-Jitsu-Card-Manager, author: AllAcacia (https://github.com/AllAcacia/)
 Contains files that allows you to create Card-Jitsu cards. Instructions on how to use may not help, as features were developed on my needs. Download images here: (https://clubpenguin.fandom.com/wiki/List_of_Regular_Card-Jitsu_Cards_(series_1-4)), here: (https://clubpenguin.fandom.com/wiki/List_of_Regular_Card-Jitsu_Cards_(series_5-8)), and here: (https://clubpenguin.fandom.com/wiki/List_of_Card-Jitsu_Power_Cards). I won't be providing these images as I am concerned about copyright issues.
 
+![alt text](https://github.com/AllAcacia/Card-Jitsu-Card-Manager/blob/main/page-img-1.png "Preview 1")
+
 ## access_database.py
 Accesses "card_database.txt", which I have prefilled with all of the Club Penguin Card-Jitsu cards, with their details denoting: (rank, value, colour, element, power status, effect). 
 ### Appending
