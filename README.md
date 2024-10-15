@@ -3,6 +3,8 @@ Contains files that allows you to create Card-Jitsu cards. Instructions on how t
 
 ## access_database.py
 Accesses "card_database.txt", which I have prefilled with all of the Club Penguin Card-Jitsu cards, with their details denoting: (rank, value, colour, element, power status, effect). 
+### Reading
+Entering "r" will go through all of the lines in "cards_database.txt", and will create Card objects automatically and will be printed as defined in their "_repr_" definition (Card(Name, rank, value, element, colour, power status, effect)). May look into making a function that finds a card of a specific rank, or sort by certain Card filters.
 ### Appending
 Entering "a" will append a new card where you then enter a string "x.yabcd.v", where x=rank (id) (>1), y=value (2-12), a=element (f/w/s), b=colour (roygbp), c=power status (y/n), v=card name (string can be as long as you want). This will then be appended to "card_database.txt", and will be sifted in to the appropriate line.
 ### Deleting
