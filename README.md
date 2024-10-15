@@ -1,5 +1,6 @@
 # Card-Jitsu-Card-Manager
 Author: AllAcacia (https://github.com/AllAcacia/)
+
 Project Discord Server: https://discord.gg/2aw3GXCU8D
 
 Contains files that allows you to create Card-Jitsu cards. Instructions on how to use may not help, as features were developed on my needs. Download images here: (https://clubpenguin.fandom.com/wiki/List_of_Regular_Card-Jitsu_Cards_(series_1-4)), here: (https://clubpenguin.fandom.com/wiki/List_of_Regular_Card-Jitsu_Cards_(series_5-8)), and here: (https://clubpenguin.fandom.com/wiki/List_of_Card-Jitsu_Power_Cards). I won't be providing these images as I am concerned about copyright issues.
