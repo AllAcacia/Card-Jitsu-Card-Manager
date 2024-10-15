@@ -135,6 +135,13 @@ def delete_database(file, cards, ranks, rank):
     return None
 
 
+def search_database_by_element(cards, element_tally):
+    """Tally up them elements!"""
+    for card in cards:
+        element_tally[card.element] += 1
+    return None
+
+
 def reorder_contents(file, cards):
     """Reorders the file's contents."""
     file = open(FILENAME, "w")
@@ -160,7 +167,9 @@ def start_program():
     command_message = "Read from <r>, append to <a>, delete from <d>, <s> to line cards in order, or exit <.> the database? (or <m> for memes!)\n"
     file = open(FILENAME, "r")
     cards, ranks = read_database()
-    print(f"There are {len(cards)} cards to choose from!")
+    element_tally = {"f": 0, "w": 0, "s": 0}
+    search_database_by_element(cards, element_tally)
+    print(f"There are {len(cards)} cards to choose from!\nThere are {element_tally['f']} fire cards, {element_tally['w']} water cards, and {element_tally['s']} snow cards.")
 
     command = input(command_message)
     # command = "w" # default command is write
@@ -196,18 +205,25 @@ def start_program():
         
         elif command == LEGAL_COMMANDS[4]: # For fun
             print("Generating an image..?")
-            the_int = int(input(f"Choose a number between 1 and {len(cards)}:\n"))
+            the_int = int(input(f"Choose a number between 1 and {cards[-1].rank}:\n"))
+            
+            index = 0
+            while index < len(cards) and cards[index].rank != the_int:
+                index += 1
+            if cards[index].rank == the_int:
+                the_int = cards[index].rank
 
-            print(f"Chose {the_int} as the number!")
-            the_rank = cards[the_int-1].rank
-            the_str = str(the_rank)
-            while len(the_str) < 3:
-                the_str = "0" + the_str
-                print("Adding a 0...")
-            the_path = "_collated/card_"+str(the_rank)+".png"
-            print(f"Showing '{the_path}' as:\n{cards[the_int-1]}")
-            im = Image.open(the_path)
-            im.show()
+                print(f"Chose {the_int} as the number!")
+                the_str = str(the_int)
+                while len(the_str) < 3:
+                    the_str = "0" + the_str
+                    print("Adding a 0...")
+                the_path = "_collated/card_"+the_str+".png"
+                print(f"Showing '{the_path}' as:\n{cards[index]}")
+                im = Image.open(the_path)
+                im.show()
+            else:
+                print("Couln't find card...")
             # except:
             #     print("Something went wrong with delivering your meme...")
         
