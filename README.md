@@ -1,4 +1,6 @@
-# Card-Jitsu-Card-Manager, author: AllAcacia (https://github.com/AllAcacia/)
+# Card-Jitsu-Card-Manager
+Author: AllAcacia (https://github.com/AllAcacia/)
+
 Contains files that allows you to create Card-Jitsu cards. Instructions on how to use may not help, as features were developed on my needs. Download images here: (https://clubpenguin.fandom.com/wiki/List_of_Regular_Card-Jitsu_Cards_(series_1-4)), here: (https://clubpenguin.fandom.com/wiki/List_of_Regular_Card-Jitsu_Cards_(series_5-8)), and here: (https://clubpenguin.fandom.com/wiki/List_of_Card-Jitsu_Power_Cards). I won't be providing these images as I am concerned about copyright issues.
 
 ## access_database.py
@@ -12,9 +14,13 @@ Entering "d" will prompt you to enter a rank number, and the corresponding card 
 ### Image Preview
 Entering "m", then a number between 1 and the highest rank number in the directory. Shows the image of the card of that rank number.
 
-I have provided "file_rename.py" to bulk rename file prefixes in a directory. I have also provided "fil_rename_1.py" which bulk renames file suffixes to a non-breaking sequence (1, 2, 3, ...), instead of (2, 5, 12, ...). These functions are intended to be used when you bulk download the corresponding image files, and the variables may need to be left up to you to set to function properly. You can use the ".blend" files to go through all of the images and crop/mask them so they are all graphically consistent (there is one for non-power cards, and one for power cards as they are different sizes), the colour settings should be fine, and compression is 100% with minimal quality decrease.
+I have provided "file_rename_1.py" which bulk renames file suffixes to a non-breaking sequence (1, 2, 3, ...), instead of (2, 5, 12, ...), and "resequence.py" to fix them back together. These functions are intended to be used when you bulk download the corresponding image files, and the variables may need to be left up to you to set to function properly. You can use the ".blend" files to go through all of the images and crop/mask them so they are all graphically consistent (there is one for non-power cards, and one for power cards as they are different sizes), the colour settings should be fine, and compression is 100% with minimal quality decrease.
 ### Exiting Program
 You can exit the program by entering "." on the main terminal.
+### Reordering CSV
+Entering "s" will rewrite the ".csv" file but in order of rank. This is done automatically on program execution, appending, deleting, and reading. This is more of a helper function if anything.
+### Card-Jitsu Dueling
+Entering "b" will prompt you to enter the ranks of two cards to be dueled against each other.
 
 
 ## Examples
