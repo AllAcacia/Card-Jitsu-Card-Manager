@@ -22,3 +22,6 @@ You can exit the program by entering "." on the main terminal.
 
 ![alt text](https://github.com/AllAcacia/Card-Jitsu-Card-Manager/blob/main/page-img-2.png "Preview 2")
 *Showing the ".blend" file setup, and the before & after for the image. Note the image shadow and the aura has been masked out.*
+
+
+I also have a mock-up logo for "Card-Jitsu Quartet", a potential expansion of this project ready :3 (to be revealed)
