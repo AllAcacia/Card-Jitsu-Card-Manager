@@ -1,11 +1,11 @@
 from os import rename, listdir, getcwd
 
-dir_to_change = "non-power-format"
-dir_to_follow = "non-power"
+dir_to_change = "_collated_xxs"
+dir_to_follow = "_collated"
 
 prefix_change = "0"
-prefix_follow = "Card-Jitsu_Cards_full_"
-prefix_wanted = "card_"
+prefix_follow = "card_"
+prefix_wanted = "card_xxs_"
 
 def resequence():
     if len(listdir(dir_to_change)) != len(listdir(dir_to_follow)):
@@ -15,7 +15,7 @@ def resequence():
 
     fnames_follow = listdir(dir_to_follow)
     fnames_change = listdir(dir_to_change)
-    for i in range(len(fnames_follow)):
+    for i in range(len(fnames_follow)-1):
         if fnames_change[i][0:len(prefix_change)] == prefix_change:
             fname = fnames_follow[i]
             # print(fnames_follow[i] + ', ' + listdir(dir_to_follow)[i])

@@ -7,8 +7,8 @@ from os import rename, listdir, getcwd
 
 # prefix = "Card-Jitsu_Cards_full_"
 desired_prefix = "card_"
-expected_prefix = "Card-Jitsu_Cards_full_"
-directory = "non-power - Copy"
+expected_prefix = "card_"
+directory = "_collated_1-509"
 
 fnames = listdir(directory)
 
@@ -27,6 +27,7 @@ def bulk_rename_prefix(do_rename=False):
         print(new_fname)
         if do_rename:
             rename(directory+'/'+fname, directory+'/'+new_fname)
+            pass
         
         idno_int += 1
 
