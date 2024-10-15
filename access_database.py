@@ -3,7 +3,7 @@ Authored by AllAcacia, on 14/10/2024 (dd/mm/yyyy)
 access_database.py | Used to access a .txt file, laid out like a .csv file.
 """
 
-from card import Card
+from Card import Card
 from PIL import Image
 
 FILENAME = "card_database.txt"

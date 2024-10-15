@@ -4,6 +4,8 @@ card.py | "Card" class file, contains dictionaries for what symbols mean.
 Intended to be used for in-game logic too, implemented as needed.
 """
 
+from Match import Match
+
 COLOURS = {"r": (0, "red"), "o": (1, "orange"), "y": (2, "yellow"), "g": (3, "green"), "b": (4, "blue"), "p": (5, "purple")}
 ELEMENTS = {"f": (0, "fire"), "w": (1, "water"), "s": (2, "snow")}
 POWERED = {"n": (False, "not powered"), "y": (True, "powered")}
