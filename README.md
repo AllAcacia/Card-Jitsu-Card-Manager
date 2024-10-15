@@ -10,7 +10,7 @@ Entering "a" will append a new card where you then enter a string "x.yabcd.v", w
 ### Deleting
 Entering "d" will prompt you to enter a rank number, and the corresponding card data will be taken out of "card_database.txt".
 ### Image Preview
-Entering "m", then a number between 1 and the number of cards you have will grab that specific card. May rework so it grabs it based on the rank number. 
+Entering "m", then a number between 1 and the highest rank number in the directory. Shows the image of the card of that rank number.
 
 I have provided "file_rename.py" to bulk rename file prefixes in a directory. I have also provided "fil_rename_1.py" which bulk renames file suffixes to a non-breaking sequence (1, 2, 3, ...), instead of (2, 5, 12, ...). These functions are intended to be used when you bulk download the corresponding image files, and the variables may need to be left up to you to set to function properly. You can use the ".blend" files to go through all of the images and crop/mask them so they are all graphically consistent (there is one for non-power cards, and one for power cards as they are different sizes), the colour settings should be fine, and compression is 100% with minimal quality decrease.
 ### Exiting Program
