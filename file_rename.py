@@ -25,7 +25,7 @@ def bulk_rename_prefix(do_rename=False):
         # print(fname + ', ' + new_fname)
         print(new_fname)
         if do_rename:
-            # rename(directory+'/'+fname, directory+'/'+new_fname)
+            rename(directory+'/'+fname, directory+'/'+new_fname)
 
 def main():
     bulk_rename_prefix(False)
