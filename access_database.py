@@ -4,11 +4,12 @@ access_database.py | Used to access a .txt file, laid out like a .csv file.
 """
 
 from Card import Card
+from Match import Match
 from PIL import Image
 
 FILENAME = "card_database.txt"
 HEADER_SIZE = 11
-LEGAL_COMMANDS = ("r", "a", "d", ".", "m", "s") # m for meme
+LEGAL_COMMANDS = ("r", "a", "d", ".", "m", "s", "b") # m for meme
 COLOURS = ("r", "o", "y", "g", "b", "p")
 ELEMENTS = ("f", "w", "s")
 POWERED = ("n", "y")
@@ -142,6 +143,49 @@ def search_database_by_element(cards, element_tally):
     return None
 
 
+def get_card_index(rank, cards):
+    """Finds a card based on its rank."""
+    index = 0
+    for index, card in enumerate(cards):
+        if card.rank == rank:
+            return index
+    return None
+
+
+def generate_image_preview(cards):
+    """Generate a preview!"""
+    the_int = int(input(f"Choose a number between 1 and {cards[-1].rank}:\n"))        
+    index = get_card_index(the_int, cards)
+    if index is not None:
+        the_int = cards[index].rank
+
+        print(f"Chose {the_int} as the number!")
+        the_str = str(the_int)
+        while len(the_str) < 3:
+            the_str = "0" + the_str
+            print("Adding a 0...")
+        the_path = "_collated/card_"+the_str+".png"
+        print(f"Showing '{the_path}' as:\n{cards[index]}")
+        im = Image.open(the_path)
+        im.show()
+    else:
+        print("Couln't find card...")
+
+
+def match_cards(cards):
+    """Simulate an actual Card-Jitsu battle!"""
+    card1 = cards[get_card_index(int(input(f"Enter the rank of the first card to match: (<={cards[-1].rank})\n")), cards)]
+    card2 = cards[get_card_index(int(input(f"Enter the rank of the second card to match: (<={cards[-1].rank})\n")), cards)]
+    match_result = card1.match_two_cards(card2)
+    if match_result == Match.WIN:
+        print(f"Card '{card1.name}' wins against Card '{card2.name}'! ({card1.element}{card1.value} vs {card2.element}{card2.value})")
+    if match_result == Match.LOSS:
+        print(f"Card '{card1.name}' loses against Card '{card2.name}'... ({card1.element}{card1.value} vs {card2.element}{card2.value})")
+    if match_result == Match.DRAW:
+        print(f"Card '{card1.name}' draws with Card '{card2.name}'. ({card1.element}{card1.value} vs {card2.element}{card2.value})")
+    return None
+
+
 def reorder_contents(file, cards):
     """Reorders the file's contents."""
     file = open(FILENAME, "w")
@@ -164,7 +208,7 @@ def exit_program(file):
 
 def start_program():
     """Executes program, asks whether to read or write."""
-    command_message = "Read from <r>, append to <a>, delete from <d>, <s> to line cards in order, or exit <.> the database? (or <m> for memes!)\n"
+    command_message = "Read from <r>, append to <a>, delete from <d>, <s> to line cards in order, or exit <.> the database? (<m> for memes, <b> to match cards)\n"
     file = open(FILENAME, "r")
     cards, ranks = read_database()
     element_tally = {"f": 0, "w": 0, "s": 0}
@@ -205,31 +249,15 @@ def start_program():
         
         elif command == LEGAL_COMMANDS[4]: # For fun
             print("Generating an image..?")
-            the_int = int(input(f"Choose a number between 1 and {cards[-1].rank}:\n"))
-            
-            index = 0
-            while index < len(cards) and cards[index].rank != the_int:
-                index += 1
-            if cards[index].rank == the_int:
-                the_int = cards[index].rank
-
-                print(f"Chose {the_int} as the number!")
-                the_str = str(the_int)
-                while len(the_str) < 3:
-                    the_str = "0" + the_str
-                    print("Adding a 0...")
-                the_path = "_collated/card_"+the_str+".png"
-                print(f"Showing '{the_path}' as:\n{cards[index]}")
-                im = Image.open(the_path)
-                im.show()
-            else:
-                print("Couln't find card...")
-            # except:
-            #     print("Something went wrong with delivering your meme...")
+            generate_image_preview(cards)
         
         elif command == LEGAL_COMMANDS[5]: # Reorder
             print("Reordering the database...")
             reorder_contents(file, cards)
+        
+        elif command == LEGAL_COMMANDS[6]:
+            print("Matching two cards...")
+            match_cards(cards)
         
         command = input(command_message)
 

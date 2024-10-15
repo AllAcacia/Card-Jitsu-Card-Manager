@@ -110,3 +110,29 @@ class Card():
             print(f"Both cards share the rank '{self.rank}'.")
         
         return overlap
+
+
+    def match_two_cards(self, other):
+        """Matches two cards! Returns a "Match" enum object that determines
+           if you win, lose, or draw a match."""
+        if self.element == other.element:
+            if self.value > other.value:
+                result = Match.WIN
+            elif self.value < other.value:
+                result = Match.LOSS
+            else:
+                result = Match.DRAW
+        elif self.element == "f" and other.element == "w":
+            result = Match.LOSS
+        elif self.element == "f" and other.element == "s":
+            result = Match.WIN
+        elif self.element == "w" and other.element == "f":
+            result = Match.WIN
+        elif self.element == "w" and other.element == "s":
+            result = Match.LOSS
+        elif self.element == "s" and other.element == "f":
+            result = Match.LOSS
+        elif self.element == "s" and other.element == "w":
+            result = Match.WIN
+        
+        return result
